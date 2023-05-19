@@ -1,2 +1,15 @@
 # House-Price-Prediction-System
-House Price Prediction: Utilizing regression algorithms, this machine learning project accurately estimates house prices based on factors such as location, area, number of bathrooms, and BHK (bedroom, hall, kitchen). Leverage the insights gained from crop yield prediction to enhance the accuracy of the price predictions.
+
+The House Price Prediction System is a machine learning-based application that predicts house prices based on various features such as location, square footage, number of bathrooms, and BHK (bedroom, hall, kitchen). The system utilizes regression algorithms to provide accurate price estimates.
+
+## Features
+
+- Utilizes machine learning regression techniques for house price prediction.
+- Factors in important features such as location, square footage, bathrooms, and BHK.
+- Provides accurate price estimates to assist in making informed real estate decisions.
+
+## Technologies Used
+
+- Machine Learning: Regression algorithms for house price prediction.
+- Frontend: HTML, CSS, JavaScript for the user interface.
+- Backend: Flask for connecting the frontend with the machine learning models.
