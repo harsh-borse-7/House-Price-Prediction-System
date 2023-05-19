@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Price Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/index.css">
+
+
+
+  </head>
+
+  <body style="background: radial-gradient(circle, rgba(0,4,40,1) 0%, rgba(0,78,146,1) 100%);">
+    <h1 style="text-align: center; color: white;">Home Price Predictor</h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img src="../static/icon.png" alt="..." height="60px" width="60px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about_us">About the price Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="predict">Predict</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <br>
+      <div>
+        <form class="Modelform" name="Modelform" method="post" >
+            <label for="area">Area (squarefoot):</label>
+            <input type="number" id="area" name="area" required><br><br>
+            <label for="bhk">BHK:</label>
+            <input type="number" id="bhk" name="bhk" required><br><br>
+            <label for="bathrooms">Number of Bathrooms:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required><br><br>
+
+
+            <label for="location">Location:</label>
+
+            <select id="location" class="selectpicker form-control" name="location" >
+
+
+                {% for location in locations %}
+                <option value="{{location}}">{{location}}</option>
+                {% endfor %}
+
+            </select>
+
+<br><br>
+            <button class="btn form-control" onclick="send_data()">Predict</button>
+        </form>
+
+          <br>
+          <div class="row">
+              <div class="col-12" style="text-align: center">
+                 <h4><span id="prediction" style="color:red"></span></h4>
+             </div>
+          </div>
+
+    </div>
+   
+    
+     <script src="../static/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
